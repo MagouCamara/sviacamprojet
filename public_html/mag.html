@@ -1,0 +1,19 @@
+<html>
+<body>
+<!-- <canvas  id ="cvs49" width ="150" height = "150" onclick="gereclick(event)"> -->
+ <canvas id="cvs49" class="canvas" width=100px; height="100px" style="border: 1px solid green;position:absolute;left:15%;bottom:15%; display: block;" onclick="gereclick(event)"></canvas>
+</canvas>
+<script>
+var canv1 = document.getElementById('cvs49');
+var context1 = canv1.getContext('2d');
+
+function gereclick(event) { 
+  var imageD = context1.getImageData(0,0,150,150);
+  var mapP=imageD.data;
+   alert("code RGBA du second pixel : R= "+mapP[4]+", V= "+mapP[8]+", B= " +mapP[16]+", A= "+mapP[7]);
+  
+   };
+ </script>
+ dfghkjkl
+ </body>
+ </html>
