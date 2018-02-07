@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 
+/* global files */
+
 $(document).ready(function(){
 
             $('.tagsinput').tagsinput({
                 tagClass: 'label label-primary'
             });
 
-            var $image = $(".image-crop > img")
+            var $image = $(".image-crop > img");
             $($image).cropper({
                 aspectRatio: 1.618,
                 preview: ".img-preview",

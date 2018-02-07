@@ -8,14 +8,14 @@ $(document).ready(function(){
 
             $('#loading-example-btn').click(function () {
                 btn = $(this);
-                simpleLoad(btn, true)
+                simpleLoad(btn, true);
 
                 // Ajax example
 //                $.ajax().always(function () {
 //                    simpleLoad($(this), false)
 //                });
 
-                simpleLoad(btn, false)
+                simpleLoad(btn, false);
             });
         });
 
