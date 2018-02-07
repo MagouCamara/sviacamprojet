@@ -77,11 +77,11 @@ $(document).ready(function(){
                 tagClass: 'label label-primary'
             });
 
-            var $image = $(".image-crop > img")
+            var $image = $(".image-crop > img");
             $($image).cropper({
                 aspectRatio: 1.618,
                 preview: ".img-preview",
-                done: function(data) {
+                done: function("#video1") {
                     // Output the result data for cropping image.
                 }
             });
@@ -166,7 +166,7 @@ $(document).ready(function(){
                 minViewMode: 1,
                 keyboardNavigation: false,
                 forceParse: false,
-                forceParse: false,
+                //forceParse: false,
                 autoclose: true,
                 todayHighlight: true
             });

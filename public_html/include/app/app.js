@@ -5,6 +5,6 @@
  */
  $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function (e){
         $('body').hasClass('fullscreen-video') ? $('body').removeClass('fullscreen-video')
-        : $('body').addClass('fullscreen-video')
+        : $('body').addClass('fullscreen-video');
     });
 
