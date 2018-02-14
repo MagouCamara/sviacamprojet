@@ -1,0 +1,9 @@
+body
+{
+  font-family: Monospace;
+  font-weight: bold;
+  background-color: #ccccff;
+  margin: 5%;
+  overflow: scroll;
+  top:35px;
+}
