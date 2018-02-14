@@ -2,7 +2,7 @@
 <html lang="fr">
   <head>
     <!-- Title -->
-    <title>Architecture | Unify - Responsive Website Template</title>
+    <title>SVIACAM</title>
 
     <!-- Required Meta Tags Always Come First -->
     <meta charset="utf-8">
@@ -37,15 +37,6 @@
              data-header-fix-moment-classes="light-theme u-theme-shadow-v1 g-bg-white g-py-10--md">
           <nav class="navbar navbar-expand-lg p-0 g-px-15">
             <div class="container g-pos-rel">
-              <a href="/" class="g-hidden-lg-up navbar-brand mr-0">
-                <img class="d-block g-width-140 g-width-160--md" src="assets/img/logo-light.png" alt="Image Description"
-                     data-header-fix-moment-exclude="d-block"
-                     data-header-fix-moment-classes="d-none">
-
-                <img class="d-none g-width-140 g-width-160--md" src="assets/img/logo-dark.png" alt="Image Description"
-                     data-header-fix-moment-exclude="d-none"
-                     data-header-fix-moment-classes="d-block">
-              </a>
 
               <!-- Navigation -->
               <?php include "include/nav.html"; ?>
@@ -72,16 +63,20 @@
       <!-- End Header v1 -->
 
       <!-- Section Content -->
-      <section id="home" class="u-bg-overlay g-pos-rel g-theme-bg-blue-dark-v1-opacity-0_8--after">
-          <div class="js-slide g-bg-img-hero g-height-100vh" style="background-image: url(assets/img-temp/1600x1060/img1.jpg);"></div>
+      <section  class="u-bg-overlay g-pos-rel g-theme-bg-blue-dark-v1-opacity-0_8--after">
+          <div class="js-slide g-bg-img-hero g-height-100vh" style="background-image: url(assets/img-temp/background.jpg);"></div>
         </div>
 
         <div class="u-bg-overlay__inner g-absolute-centered w-100">
           <div class="container text-center g-max-width-750">
             <div class="text-uppercase u-heading-v2-4--bottom u-promo-title g-brd-primary">
-              <h3 class="h3 g-letter-spacing-7 g-font-size-12 g-font-weight-400 g-color-white g-mb-25">Architecture company</h3>
-              <h2 class="u-heading-v2__title g-line-height-1 g-letter-spacing-3 g-font-size-75 g-color-white mb-0">We are Unify</h2>
+              <h3 class="h3 g-letter-spacing-7 g-font-size-12 g-font-weight-400 g-color-white g-mb-25">Projet d'etude SVIACAM</h3>
+              <h2 class="u-heading-v2__title g-line-height-1 g-letter-spacing-3 g-font-size-75 g-color-white mb-0">We are Web</h2>
             </div>
+
+            <a class="btn btn-lg u-btn-darkred g-font-weight-800 g-font-size-18 text-uppercase g-rounded-50 g-px-40 g-py-15" href="app.php">
+              Commencer
+            </a>
           </div>
         </div>
       </section>
