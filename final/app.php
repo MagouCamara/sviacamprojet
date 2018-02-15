@@ -39,7 +39,28 @@
           <div class="container">
             <!-- Navigation -->
             <div class="collapse navbar-collapse align-items-center flex-sm-row g-pt-10 g-pt-5--lg g-mr-40--lg" id="navBar">
-              <?php include "include/nav.html" ?>
+              <div class="collapse navbar-collapse align-items-center flex-sm-row" id="navBar">
+                <ul class="js-scroll-nav navbar-nav align-items-lg-center text-uppercase g-font-weight-700 g-letter-spacing-1 g-font-size-12 g-pt-20 g-pt-0--lg mx-auto"
+                    data-splitted-breakpoint="992">
+                  <li class="nav-item g-mr-30--lg g-mb-7 g-mb-0--lg active">
+                    <a href="index.php" class="nav-link p-0">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <!-- Logo -->
+                  <li class="g-hidden-lg-down nav-logo-item g-mx-15--lg">
+                    <a href="index.php" class="js-go-to navbar-brand mr-0"
+                       data-type="static">
+                      <img class="d-block g-width-140 g-width-160--md" src="assets/img/SVCM.png" alt="Image Description"
+                           data-header-fix-moment-exclude="d-block"
+                           data-header-fix-moment-classes="d-none">
+                    </a>
+                  </li>
+                  <!-- End Logo -->
+
+                  <li class="nav-item g-mx-30--lg g-mb-7 g-mb-0--lg">
+                    <a href="help.php" class="nav-link p-0">Aide</a>
+                  </li>
+                </ul>
+              </div>
             </div>
             <!-- End Navigation -->
           </div>
