@@ -210,6 +210,7 @@
     var buttons = [];
     var large = 40 ;
     var haut = 40 ;
+    var img ="images/img.png"
     // ACTIVE CANVAS 1
         function checking1 (check) {
             if (check.checked)
@@ -217,7 +218,7 @@
                 // document.getElementById("canvas1").style.display="block";
               // var button1 = document.getElementById('layer1');
               var button1 = new Image();
-               button1.src ="images/square.png";
+               button1.src =img;
               var buttonData1 = { name:"red", image:button1, x:131 - 96 - 30, y:5, w:large, h:haut };
               // var buttonData1 = { name:"red"};
               buttons.push( buttonData1 );
@@ -242,7 +243,7 @@
                 {
                   // var button2 = document.getElementById('layer2');
                  var button2 = new Image();
-                button2.src ="images/square.png";
+                button2.src =img;
                   var buttonData2 = { name:"green", image:button2, x:131 - 96 - 30, y:85, w:large, h:haut };
                  buttons.push( buttonData2 );
 
@@ -266,7 +267,7 @@
                     {
                       // var button3 = document.getElementById('layer3');
                     var button3 = new Image();
-                    button3.src ="images/square.png";
+                    button3.src =img;
                      var buttonData3 = { name:"blue", image:button3, x:312 - 32 - 10, y:5, w:large, h:haut };
                     buttons.push( buttonData3 );
 
@@ -291,7 +292,7 @@
                         {
                           // var button3 = document.getElementById('layer3');
                         var button4 = new Image();
-                        button4.src ="images/square.png";
+                        button4.src =img;
                          var buttonData4 = { name:"yellow", image:button4, x:312 - 32 - 10, y:85, w:large, h:haut };
                         buttons.push( buttonData4 );
 
@@ -415,7 +416,7 @@
           }
           else if (buttons[b].name == "yellow")  {
             window.scrollBy(0,-100);
-          }    
+          }
         }
       }
     }
