@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="assets/css/unify-core.css">
   <link rel="stylesheet" href="assets/css/unify-components.css">
   <link rel="stylesheet" href="assets/css/unify-globals.css">
+  <link href="assets/css/style.css" rel="stylesheet">
 
 </head>
 
@@ -61,37 +62,87 @@
         <div class="row">
                   <div class="col-lg-6 g-mb-40 g-mb-0--lg">
                     <video id="monitor" autoplay style="display: none; width: 320px; height: 240px;"></video>
-                    <div id="canvasLayers" width="320" height="240" style=" /*border: 5px solid pink;*/ position: absolute;/*top : 0px;*/">
-                      <canvas id="videoCanvas" width="320" height="240" style="/*z-index: 1;*/position: absolute; /*top:0px;*/"></canvas>
+                    <div id="canvasLayers" width="320" height="240" style="  position: absolute;">
+                      <canvas id="videoCanvas" width="320" height="240" style="position: absolute; "></canvas>
 
-                      <canvas id="layer2" width="320" height="240" style="z-index: 2; position: absolute; opacity:0.5; border: 3px solid yellow;"></canvas>
+                      <canvas id="layer2" width="320" height="240" style="z-index: 2; position: absolute; opacity:0.5; "></canvas>
 
-                      <canvas id="layerA" width="40" height="40" style="/*z-index: 2; */position: absolute; left:5px; top:5px; opacity:0.5; border: 3px solid red; display:none;"></canvas>
-                      <canvas id="layerB" width="40" height="40" style="/*z-index: 2; */position: absolute; left:140px; top:5px; opacity:0.5; border: 3px solid green; display:none;"></canvas>
-                      <canvas id="layerC" width="40" height="40" style="/*z-index: 2; */; position: absolute; left:270px; top:5px; opacity:0.5; border: 3px solid blue; display:none;"></canvas>
-                      <!-- <canvas id="layer4" width="70" height="70" style="z-index: 2; position: absolute; left:5px; top:150px; opacity:0.5; border: 3px solid yellow;"></canvas> -->
+                      <canvas id="layerA" width="40" height="40" style="position: absolute; left:5px; top:5px; opacity:0.5; border: 3px solid red; display:none;"></canvas>
+                      <canvas id="layerB" width="40" height="40" style="position: absolute; left:270px; top:5px; opacity:0.5; border: 3px solid blue; display:none;"></canvas>
+                      <canvas id="layerC" width="40" height="40" style="position: absolute; left:5px; top:85px; opacity:0.5; border: 3px solid green; display:none;"></canvas>
+                        <canvas id="layerD" width="40" height="40" style="position: absolute; left:270px; top:85px; opacity:0.5; border: 3px solid yellow; display:none;"></canvas>
                     </div>
 
-                    <canvas id="blendCanvas" style="border : 3px solid yellow; position: relative; left: 350px; width: 320px; height: 240px; display:none;"></canvas>
-
-                    <div id="messageError"></div>
-                    <div id="messageArea" style="position: fixed; left: 30%; top: 30px;">
-                      <font size="+4" color="blue">
-                        <b> button blue Triggered.</b>
-                      </font>
-                    </div>
+                    <canvas id="blendCanvas" style="border : 3px solid yellow; position: relative; left: 350px; width: 320px; height: 240px; display:none"></canvas>
 
                   </div>
 
                   <div class="col-lg-5 g-mb-40 g-mb-10--lg">
-                    <form role="form">
-                        <div>
-                            <label>   <input type="checkbox" class="i-checks" id="i-checks" onclick="checking1(this)"> Activé le capteur Rouge</label>
-                              <label>   <input type="checkbox" class="i-checks" id="i-checks" onclick="checking2(this)"> Activé le capteur Vert</label>
-                                <label>   <input type="checkbox" class="i-checks" id="i-checks" onclick="checking3(this)"> Activé le capteur Bleu</label>
-                        </div>
                     </form>
-
+<!--  Form Capteur 1-->
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5><i class="fas fa-map-marker" style="color:red"></i> Capteur</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <form role="form">
+                                <div>
+                                   <label> <input type="checkbox" class="i-checks" id="i-checks" onclick="checking1(this)"  > Activer </label>
+                                   <div id="actionR" style=" font-style:italic; color:black; font-size:x-small">
+                                     <b>Action : Ouverture d'un onglet vers Eurosport </b>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+<!-- END  Form Capteur 1-->
+<!--  Form Capteur 2-->
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5><i class="fas fa-map-marker" style="color:blue"></i> Capteur</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <form role="form">
+                                <div>
+                                   <label> <input type="checkbox" class="i-checks" id="i-checks" onclick="checking3(this)"  > Activer </label>
+                                   <div id="actionR" style=" font-style:italic; color:black; font-size:x-small">
+                                     <b>Action : Faire un précédent dans le navigateur </b>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+<!-- END  Form Capteur 2-->
+<!--  Form Capteur 3-->
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5><i class="fas fa-map-marker" style="color:green"></i> Capteur</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <form role="form">
+                                <div>
+                                   <label> <input type="checkbox" class="i-checks" id="i-checks" onclick="checking2(this)"  > Activer </label>
+                                   <div id="actionR" style=" font-style:italic; color:black; font-size:x-small">
+                                     <b>Action : Scroller vers le bas</b>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+<!-- END  Form Capteur 3-->
+<!--  Form Capteur 4-->
+                    <div class="ibox float-e-margins">
+                        <div class="ibox-title">
+                            <h5><i class="fas fa-map-marker" style="color:yellow"></i> Capteur</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <form role="form">
+                                <div>
+                                   <label> <input type="checkbox" class="i-checks" id="i-checks" onclick="checking4(this)"  > Activer </label>
+                                   <div id="actionR" style=" font-style:italic; color:black; font-size:x-small">
+                                     <b>Action : Scroller vers le haut </b>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+<!-- END  Form Capteur 4-->
                   </div>
         </div>
 
@@ -109,6 +160,7 @@
 
 
   <!-- JS Global Compulsory -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/jquery-migrate/jquery-migrate.min.js"></script>
   <script src="assets/vendor/popper.min.js"></script>
@@ -191,10 +243,10 @@
                   // var button2 = document.getElementById('layer2');
                  var button2 = new Image();
                 button2.src ="images/square.png";
-                  var buttonData2 = { name:"green", image:button2, x:224 - 64 - 20, y:5, w:large, h:haut };
+                  var buttonData2 = { name:"green", image:button2, x:131 - 96 - 30, y:85, w:large, h:haut };
                  buttons.push( buttonData2 );
 
-                 document.getElementById("layerB").style.display="block";
+                 document.getElementById("layerC").style.display="block";
                }
                else {
                  for(var i = buttons.length -1; i>=0; i--)
@@ -204,7 +256,7 @@
                      buttons.splice( i , 1);
                    }
                  }
-                 document.getElementById("layerB").style.display="none";
+                 document.getElementById("layerC").style.display="none";
                }
             };
 
@@ -218,7 +270,7 @@
                      var buttonData3 = { name:"blue", image:button3, x:312 - 32 - 10, y:5, w:large, h:haut };
                     buttons.push( buttonData3 );
 
-                    document.getElementById("layerC").style.display="block";
+                    document.getElementById("layerB").style.display="block";
                   }
                   else {
                     for(var i = buttons.length -1; i>=0; i--)
@@ -229,9 +281,35 @@
                       }
                     }
 
-                    document.getElementById("layerC").style.display="none";
+                    document.getElementById("layerB").style.display="none";
                   }
                 };
+
+                // ACTIVE CANVAS 4
+                    function checking4 (check) {
+                        if (check.checked)
+                        {
+                          // var button3 = document.getElementById('layer3');
+                        var button4 = new Image();
+                        button4.src ="images/square.png";
+                         var buttonData4 = { name:"yellow", image:button4, x:312 - 32 - 10, y:85, w:large, h:haut };
+                        buttons.push( buttonData4 );
+
+                        document.getElementById("layerD").style.display="block";
+                      }
+                      else {
+                        for(var i = buttons.length -1; i>=0; i--)
+                        {
+                          if(buttons[i].name === "yellow")
+                          {
+                            buttons.splice( i , 1);
+                          }
+                        }
+
+                        document.getElementById("layerD").style.display="none";
+                      }
+                    };
+
 
 
     function animate()
@@ -323,8 +401,7 @@
 
           if (buttons[b].name == "blue") {
             console.log( "Button " + buttons[b].name + " triggered." ); // do stuff
-            //window.open('http://www.google.fr','fullscreen=yes');
-            window.scrollBy(0,-100);
+            window.history.back();
 
         }
           else if (buttons[b].name == "red") {
@@ -332,16 +409,13 @@
             window.open('http://www.eurosport.fr','fullscreen=yes');
 
           }
-          else {
+          else if (buttons[b].name == "green")  {
             console.log( "Button " + buttons[b].name + " triggered." ); // do stuff
-            //window.open('http://www.yahoo.fr','fullscreen=yes');
             window.scrollBy(0,100);
-
           }
-          //window.open('http://www.google.fr','fullscreen=yes');break;
-         // window.scrollBy(0,100);
-          //window.history.back();
-          messageArea.innerHTML = "<font size='+4' color=" + buttons[b].name + "><b>Button " + buttons[b].name + " triggered.</b></font>";
+          else if (buttons[b].name == "yellow")  {
+            window.scrollBy(0,-100);
+          }    
         }
       }
     }
